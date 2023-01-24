@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# GNU/Linux - ©NightSec
+# GNU/Linux - ©bonummaster
 # GPL - General Public License
 # Open Source - Software Libre
 #
 # ┌══════════┐  ┌════════════┐
-# █ URLSpoof █=>█ 18/04/2021 █
+# █ URLConvert █=>█ 18/01/2023 █
 # └══════════┘  └════════════┘
 #
 # ===============================================
@@ -123,7 +123,7 @@ read -r QUESTION
 #          EXECUTING USER ACTION
 # ===============================================
 if [[ "${QUESTION}" == "1" || "${QUESTION}" == "01" ]]; then
-	SHORT=$(curl -s https://is.gd/create.php\?format\=simple\&url\=${URL})
+	SHORT=$(curl -s https://v.gd/create.php\?format\=simple\&url\=${URL})
 	echo -e "${SHORT}" >> url.txt
 	PROTOCOL=$(tail -n1 url.txt | cut -d "/" -f1)
 	DOMAIN=$(tail -n1 url.txt | cut -d "/" -f4)
@@ -201,5 +201,5 @@ Question
 Spoofing
 Save
 # ===============================================
-#     Modified by NS-R00T - NightSec ©2022
+#     Modified by BonumMaster - USec ©2023
 # ===============================================
